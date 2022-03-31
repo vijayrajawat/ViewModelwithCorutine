@@ -11,3 +11,16 @@ Based on the Guide to app architecture, the examples in this topic make a networ
 Specifically, the ViewModel Architecture component calls the repository layer on the main thread to trigger the network request. This guide iterates through various solutions that use coroutines keep the main thread unblocked.
 ViewModel includes a set of KTX extensions that work directly with coroutines. These extension are lifecycle-viewmodel-ktx library and are used in this guide.
 
+//pdf download
+
+ if (!it.invoice_file.isNullOrEmpty()) {
+                    invoicePdfUrl = it.invoice_file
+                }
+
+  if (invoicePdfUrl != null){
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(invoicePdfUrl))
+                    startActivity(browserIntent)
+                }else{
+                    showToast(this,"No invoice generated")
+                }
+            }
