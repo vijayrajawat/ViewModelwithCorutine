@@ -12,6 +12,7 @@ Specifically, the ViewModel Architecture component calls the repository layer on
 ViewModel includes a set of KTX extensions that work directly with coroutines. These extension are lifecycle-viewmodel-ktx library and are used in this guide.
 
 //pdf download
+var invoicePdfUrl:String? = null
 
  if (!it.invoice_file.isNullOrEmpty()) {
                     invoicePdfUrl = it.invoice_file
